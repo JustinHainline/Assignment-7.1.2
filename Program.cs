@@ -23,12 +23,16 @@
             int merge = len1 + len2;
             char[] merged = new char[merge];
 
-            for (int i = 0, j = 0, k = 0; i < len1 || j < len2;)
+            for (int i = 0, j = 0, k = 0; i < len1 || j < len2;)  // i is index for word1, j is for word2, k is for merged word
             {
                 if (i < len1)
-                    merged[k++] = word1[i++];
+                {
+                    merged[k++] = word1[i++]; // puts letter from word1 to merged word
+                }
                 if (j < len2)
-                    merged[k++] = word2[j++];
+                {
+                    merged[k++] = word2[j++]; // puts letter from word2 to merged word
+                }
             }
 
             return new string(merged);
